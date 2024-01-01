@@ -332,7 +332,8 @@ a:focus {
         var(--c2) 0 120deg,
         var(--c3) 0 180deg
       );
-    background-size: var(--s) calc(var(--s) * 0.577);  
+  background-image: url(../images/Letter_bg.png);
+  background-size: var(--s) calc(var(--s) * 0.577);  
   background-attachment: fixed;
   color: #ffffff;
   text-align: center;
