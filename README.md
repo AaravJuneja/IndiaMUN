@@ -3,16 +3,16 @@
 🔍 Why India MUN?<br>
 Engage in global discussions, network nationally, and experience a seamless virtual MUN.
 
-🎓 Who Can Apply?
+🎓 Who Can Apply?<br>
 Open to all students! Enthusiasm for international affairs is all you need.
 
-📅 Conference Dates:
+📅 Conference Dates:<br>
 April 20-21, 2024 (After Final Exams)
 
-💰 Fees:
+💰 Fees:<br>
 Individual: ₹400/-
 
-📝 Apply Now:
+📝 Apply Now:<br>
 https://forms.gle/tDkzb9hdRnfjAo8e6
 
 🌍 Committees & Agendas:
@@ -22,13 +22,13 @@ https://forms.gle/tDkzb9hdRnfjAo8e6
 4. UNCSW: Women's Participation in Sports
 5. AIPPM: Environmental Sustainability
 
-🏆 Prizes:
+🏆 Prizes:<br>
 Winners get felicitated in the closing ceremony by a Retired Major from the Indian Army who holds the world record for most TedX Talks in India, plus cash prizes and G20 certificates.
 
-🌐 Connect:
-Instagram: [@indiamunofficial]
-WhatsApp: (8288893788)
-Email: indiamunofficial@gmail.com
+🌐 Connect:<br>
+Instagram: [@indiamunofficial]<br>
+WhatsApp: (8288893788)<br>
+Email: indiamunofficial@gmail.com<br>
 Website: https://india-mun.netlify.app/
 
 See you at India MUN 2024! 🇮🇳✨
