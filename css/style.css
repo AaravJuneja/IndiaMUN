@@ -7,13 +7,7 @@ body {
 .logo {
   height: 150px;
   width: 200x;
-  border: none;
-  outline: none;
-  padding: 0px 7px;
-  border-radius: 6px;
-  background-color: black;
-  box-shadow: 3px 3px 10px rgba(0,0,0,1),
-  -1px -1px 6px rgba(255, 255, 255, 0.4);
+
 }
 
 #founder {
@@ -77,7 +71,6 @@ body {
           transform: translateX(-50%);
 }
 
-/*header section*/
 .hero_area {
   height: 100vh;
   display: -webkit-box;
@@ -341,7 +334,7 @@ a:focus {
 
 
 .us_section {
-  background-image: url(../images/us-bg.jpg);
+  background-image: url(../images/bg_1.png);
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
@@ -388,7 +381,7 @@ a:focus {
 }
 
 .heathy_section {
-  background-image: url(../images/healthy-bg.jpg);
+  background-image: url(../images/bg_2.png);
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
@@ -433,7 +426,7 @@ a:focus {
 }
 
 .trainer_section {
-  background-image: url(../images/trainer-bg.jpg);
+  background-image: url(../images/bg_3.png);
   background-size: cover;
   background-attachment: fixed;
   color: #ffffff;
