@@ -1,6 +1,6 @@
 # Join India MUN 2024! 🚀
 
-🔍 Why India MUN?
+🔍 Why India MUN?<br>
 Engage in global discussions, network nationally, and experience a seamless virtual MUN.
 
 🎓 Who Can Apply?
