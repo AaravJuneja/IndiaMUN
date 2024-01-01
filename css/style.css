@@ -635,9 +635,9 @@ a:focus {
 }
 
 .countdown-section {
-  background-color: #27223f;
   padding: 80px 0;
   text-align: center;
+  background-image: url(../images/Countdown_bg.png);
 }
 
 .countdown-section h2 {
