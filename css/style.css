@@ -7,7 +7,22 @@ body {
 .logo {
   height: 150px;
   width: 200x;
+}
 
+.icon1 {
+  height: 110%;
+}
+
+.icon2 {
+  height: 100%;
+}
+
+.icon3 {
+  height: 100%;
+}
+
+.icon4 {
+  height: 80%;
 }
 
 #founder {
