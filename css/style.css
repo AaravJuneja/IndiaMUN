@@ -121,6 +121,15 @@ body {
   margin: 0 auto;
 }
 
+.navbar {
+  background-color: black;
+  background-size: cover;
+  background-position: fixed;
+  float: left;
+  align-items: left;
+  width: 1490px;
+}
+
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
   margin: 10px 30px;
   padding: 0;
