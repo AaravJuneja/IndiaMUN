@@ -28,7 +28,7 @@ body {
 #founder {
   height: 500px;
   float: left;
-  margin-right: 25px;
+  margin-right: 30px;
 }
 
 .layout_padding {
@@ -649,6 +649,7 @@ a:focus {
   text-align: center;
   background-image: url(../images/Countdown_bg.png);
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .countdown-section h2 {
