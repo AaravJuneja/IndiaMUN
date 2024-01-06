@@ -10,7 +10,8 @@ Open to all students! Enthusiasm for international affairs is all you need.
 April 20-21, 2024 (After Final Exams)
 
 💰 Fees:<br>
-Individual: ₹400/-
+Early Bird: ₹400/- until 7/12/23
+Individual: ₹500/-
 
 📝 Apply Now:<br>
 https://forms.gle/tDkzb9hdRnfjAo8e6
