@@ -122,12 +122,9 @@ body {
 }
 
 .navbar {
-  background-color: black;
+  background-color: #000; 
+  background-attachment: fixed;
   background-size: cover;
-  background-position: fixed;
-  float: left;
-  align-items: left;
-  width: 1490px;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
