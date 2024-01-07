@@ -121,7 +121,7 @@ body {
   margin: 0 auto;
 }
 
-.navbar {
+.header_section {
   background-color: #000; 
   background-attachment: fixed;
   background-size: cover;
