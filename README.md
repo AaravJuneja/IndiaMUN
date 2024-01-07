@@ -1,4 +1,4 @@
-## Join India MUN 2024! 🚀 [indiamun.netlify.app]
+## Join India MUN 2024! 🚀 [https://indiamun.netlify.app]
 
 🔍 Why India MUN?<br>
 Engage in global discussions, network nationally, and experience a seamless virtual MUN.
