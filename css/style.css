@@ -125,6 +125,8 @@ body {
   background-color: #000; 
   background-attachment: fixed;
   background-size: cover;
+  max-height: 150px;
+  align-items: center;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link {
@@ -219,7 +221,7 @@ a:focus {
 
 .custom_nav-container {
   z-index: 99999;
-  padding: 15px 0;
+  padding: 0;
 }
 
 .custom_nav-container .navbar-toggler {
