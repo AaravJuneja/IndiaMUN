@@ -5,7 +5,7 @@ body {
 }
 
 .logo {
-  height: 120px;
+  height: 90px;
   width: 200x;
 }
 
@@ -71,7 +71,6 @@ body {
   font-weight: bold;
   position: relative;
   padding-bottom: 5px;
-  text-transform: uppercase;
 }
 
 .heading_container h2::before {
@@ -113,8 +112,8 @@ body {
 }
 
 .header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 250px;
+  padding-left: 475px;
 }
 
 .header_section .nav_container {
@@ -136,8 +135,7 @@ body {
   color: #ffffff;
   text-align: center;
   position: relative;
-  text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-item .nav-link::after {
@@ -175,22 +173,7 @@ a:focus {
           box-shadow: none;
 }
 
-.user_option {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.user_option a {
-  color: #ffffff;
-  margin: 10px 30px;
-} 
-
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -496,160 +479,6 @@ a:focus {
   background-color: #ffffff;
   border-radius: 50px;
   margin-top: -25px;
-}
-
-.contact_section {
-  position: relative;
-  background-color: #27223f;
-  color: #ffffff;
-}
-
-.contact_section .heading_container {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.contact_section .heading_container h2::before {
-  text-align: left;
-  left: 0;
-  -webkit-transform: none;
-          transform: none;
-}
-
-.contact_section .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.contact_section .img-box img {
-  width: 100%;
-}
-
-.contact_section .form_container {
-  padding: 45px 0 45px 15px;
-}
-
-.contact_section input {
-  width: 100%;
-  border: none;
-  background-color: #ffffff;
-  outline: none;
-  color: #000000;
-  margin-top: 25px;
-  padding: 12px;
-}
-
-.contact_section input::-webkit-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input:-ms-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input::-ms-input-placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input::placeholder {
-  color: #2a2a2c;
-}
-
-.contact_section input.message-box {
-  padding: 45px 12px;
-}
-
-.contact_section button {
-  padding: 10px 65px;
-  outline: none;
-  border: none;
-  color: #ffffff;
-  background: #ff2953;
-  margin: 45px 0 0 auto;
-  text-transform: uppercase;
-}
-
-.info_section {
-  background-color: #252233;
-}
-
-.info_items {
-  width: 70%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.info_items .item {
-  width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.info_items .item .img-box {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.info_items .item .detail-box {
-  margin-top: 5px;
-  color: #fff;
-}
-
-.info_items {
-  position: relative;
-}
-
-.info_items a {
-  position: relative;
-}
-
-.info_items .item .img-box.box-1 {
-  background-image: url(../images/instagram-logo.png);
-}
-
-.info_items .item .img-box.box-2 {
-  background-image: url(../images/telephone-white.png);
-}
-
-.info_items .item .img-box.box-3 {
-  background-image: url(../images/envelope-white.png);
-}
-
-.footer_section {
-  background-color: #fbfdfd;
-  padding: 20px;
-  font-weight: 500;
-  text-align: left;
-  float: left; 
-}
-
-.footer_section p {
-  color: #292929;
-  margin: 0;
-  text-align: center;
-}
-
-.footer_section a {
-  color: #292929;
 }
 
 .countdown-section {
