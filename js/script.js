@@ -4,19 +4,21 @@ async function initiateBackend() {
   });
 }
 
+// Execute on window load
 window.onload = async () => {
   try {
     const response = await initiateBackend();
     if (response.ok) {
-      console.log("backend initiated");
+      console.log("Backend initiated");
     } else {
       console.log("Unsuccessful response:", response.status);
     }
   } catch (error) {
-    console.log(error);
+    console.log("Error during backend initiation:", error);
   }
 };
 
+// Intersection Observer for elements with 'hidden' class
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -27,9 +29,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+// Observe elements with 'hidden' class
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((element) => observer.observe(element));
 
+// Function to send data on form submission
 async function sendData(e) {
   e.preventDefault();
 
@@ -37,8 +41,14 @@ async function sendData(e) {
   const subject = document.getElementById("subject").value;
   const text = document.getElementById("text").value;
 
-  if (!email || !subject || !text) {
-    return alert("Please enter all the details.");
+  // Validate email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    return alert("Please enter a valid email address.");
+  }
+
+  if (!subject || !text) {
+    return alert("Please enter both subject and message.");
   }
 
   alert("Sending email...");
@@ -60,21 +70,28 @@ async function sendData(e) {
 
     if (response.ok) {
       console.log(JSON.stringify(data));
-      console.log("success");
-      alert("Emails sent successfully. Check your inbox for confirmation");
+      console.log("Success");
+      alert("Email sent successfully. Check your inbox for confirmation");
     } else {
-      console.log("Unsuccessful response:", response.status);
-      alert("There was an error in sending the email. Please try again later.");
+      handleErrorResponse(response.status);
     }
   } catch (error) {
-    console.error(error);
-    alert("There was an error in sending the email. Please try again later.");
+    console.error("Error during fetch:", error);
+
+    if (error instanceof TypeError && error.message === "Failed to fetch") {
+      alert("Network error. Please check your internet connection and try again.");
+    } else {
+      alert("An unexpected error occurred. Please try again later.");
+    }
   }
 }
 
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// Event listener for form submission
+document.getElementById("sendButton").addEventListener('click', sendData);
 
+// Star animation functionality
 let interval = null;
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 document.getElementsByClassName("specialText")[0].onmouseover = event => {
   let iteration = 0;
@@ -99,101 +116,4 @@ document.getElementsByClassName("specialText")[0].onmouseover = event => {
 
     iteration += 1 / 3;
   }, 30);
-};
-
-const hamburger = document.getElementById("hamburger");
-const hamburgerMenu = document.getElementById("hamburgerMenu");
-hamburger.addEventListener('click', (e) => {
-  e.preventDefault();
-  if (hamburgerMenu.classList.contains("phone-nav-menu-visible")) {
-    hamburgerMenu.classList.add("phone-nav-menu-hidden");
-    hamburgerMenu.classList.remove("phone-nav-menu-visible");
-  } else {
-    hamburgerMenu.classList.add("phone-nav-menu-visible");
-  }
-});
-
-let start = new Date().getTime();
-
-const originPosition = { x: 0, y: 0 };
-
-const last = {
-  starTimestamp: start,
-  starPosition: originPosition,
-  mousePosition: originPosition
-};
-
-const config = {
-  starAnimationDuration: 1500,
-  minimumTimeBetweenStars: 250,
-  minimumDistanceBetweenStars: 75,
-  colors: ["249 146 253", "252 254 255"],
-  sizes: ["1.4rem", "1rem", "0.6rem"],
-  animations: ["fall-1", "fall-2", "fall-3"]
-};
-
-let count = 0;
-
-const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min,
-  selectRandom = items => items[rand(0, items.length - 1)];
-
-const withUnit = (value, unit) => `${value}${unit}`,
-  px = value => withUnit(value, "px"),
-  ms = value => withUnit(value, "ms");
-
-const calcDistance = (a, b) => {
-  const diffX = b.x - a.x,
-    diffY = b.y - a.y;
-
-  return Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-};
-
-const calcElapsedTime = (start, end) => end - start;
-
-const appendElement = element => document.body.appendChild(element),
-  removeElement = (element, delay) => setTimeout(() => document.body.removeChild(element), delay);
-
-const createStar = position => {
-  const star = document.createElement("span"),
-    color = selectRandom(config.colors);
-
-  star.className = "star fa-solid fa-star";
-
-  star.style.left = px(position.x);
-  star.style.top = px(position.y);
-  star.style.fontSize = selectRandom(config.sizes);
-  star.style.color = `rgb(${color})`;
-  star.style.textShadow = `0px 0px 1.5rem rgb(${color} / 0.5)`;
-  star.style.animationName = config.animations[count++ % 3];
-  star.style.starAnimationDuration = ms(config.starAnimationDuration);
-
-  appendElement(star);
-
-  removeElement(star, config.starAnimationDuration);
-};
-
-const handleOnMove = e => {
-  const mousePosition = { x: e.pageX, y: e.pageY };
-
-  const now = new Date().getTime(),
-    hasMovedFarEnough = calcDistance(last.starPosition, mousePosition) >= config.minimumDistanceBetweenStars,
-    hasBeenLongEnough = calcElapsedTime(last.starTimestamp, now) > config.minimumTimeBetweenStars;
-
-  if (hasMovedFarEnough || hasBeenLongEnough) {
-    createStar(mousePosition);
-
-    last.starTimestamp = now;
-    last.starPosition = mousePosition;
-  }
-
-  last.mousePosition = mousePosition;
-};
-
-window.onmousemove = e => handleOnMove;
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
-
-document.body.onmouseleave = () => {
-  last.mousePosition = originPosition;
-  document.body.style.cursor = 'auto';
 };

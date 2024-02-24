@@ -84,7 +84,7 @@ nav{
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 3vw; /*Gap in nav bar*/
+  gap: 2vw; /*Gap in nav bar*/
 }
 
 .link a{
