@@ -1,19 +1,19 @@
-window.onload = async () => {
-  document.getElementsByClassName('dropdown')[0].style.left = document.getElementById('homeLink').getBoundingClientRect().left + 'px';
+async function initiateBackend() {
+  return fetch("https://indiamun-backend.onrender.com/chalja/12ka4", {
+    method: "GET"
+  });
+}
 
+window.onload = async () => {
   try {
-    const response = await fetch("https://indiamun-backend.onrender.com/chalja/12ka4", {
-      method: "GET"
-    });
-    console.log("backend initiated");
+    const response = await initiateBackend();
+    if (response.ok) {
+      console.log("backend initiated");
+    } else {
+      console.log("Unsuccessful response:", response.status);
+    }
   } catch (error) {
     console.log(error);
-  }
-};
-
-document.body.onclick = (e) => {
-  if (e.target !== document.getElementsByClassName('dropdown')[0]) {
-    document.getElementsByClassName('dropdown')[0].style.transform = 'scale(1, 0)';
   }
 };
 
@@ -32,12 +32,16 @@ hiddenElements.forEach((element) => observer.observe(element));
 
 async function sendData(e) {
   e.preventDefault();
+
   const email = document.getElementById("email").value;
   const subject = document.getElementById("subject").value;
   const text = document.getElementById("text").value;
+
   if (!email || !subject || !text) {
     return alert("Please enter all the details.");
   }
+
+  alert("Sending email...");
 
   const data = {
     "userEmail": email,
@@ -53,11 +57,17 @@ async function sendData(e) {
       },
       body: JSON.stringify(data),
     });
-    console.log(JSON.stringify(data));
-    console.log("success");
-    alert("Emails sent successfully. Check your inbox for confirmation");
+
+    if (response.ok) {
+      console.log(JSON.stringify(data));
+      console.log("success");
+      alert("Emails sent successfully. Check your inbox for confirmation");
+    } else {
+      console.log("Unsuccessful response:", response.status);
+      alert("There was an error in sending the email. Please try again later.");
+    }
   } catch (error) {
-    console.log(error);
+    console.error(error);
     alert("There was an error in sending the email. Please try again later.");
   }
 }
@@ -66,7 +76,7 @@ const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 let interval = null;
 
-document.getElementsByClassName("specialText").onmouseover = event => {
+document.getElementsByClassName("specialText")[0].onmouseover = event => {
   let iteration = 0;
 
   clearInterval(interval);
@@ -179,12 +189,11 @@ const handleOnMove = e => {
   last.mousePosition = mousePosition;
 };
 
-window.onmousemove = e => handleOnMove(e);
+window.onmousemove = e => handleOnMove;
 
 window.ontouchmove = e => handleOnMove(e.touches[0]);
 
-document.body.onmouseleave = () => last.mousePosition = originPosition;
-
-function showInternalLinks() {
-  document.getElementsByClassName('dropdown')[0].style.transform = 'scale(1, 1)';
-}
+document.body.onmouseleave = () => {
+  last.mousePosition = originPosition;
+  document.body.style.cursor = 'auto';
+};

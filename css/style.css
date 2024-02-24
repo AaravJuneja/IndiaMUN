@@ -80,7 +80,7 @@ nav{
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 4vw;
+  gap: 3vw; /*Gap in nav bar*/
 }
 
 .link a{
@@ -114,8 +114,24 @@ nav{
   margin-right: 5vw;
   border: none;
 }
+
 .btn > a {
   color: #fff;
+}
+
+.btn1 {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  background-color: #18181B;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  padding: 1.5rem 2.5rem;
+  font-size: 1.2rem;
 }
 
 .home {
@@ -588,36 +604,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.dropdown {
-  background-color: #333;
-  position: fixed;
-  top: 263px;
-  z-index: 2;
-  padding: 10px;
-  min-width: 8vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s;
-  transform: scale(1, 0);
-  transform-origin: top;
-}
-
-#hamburgerMenu li a {
-  color: white;
-}
-
-#hamburgerMenu li a:hover {
-  text-decoration: underline;
-}
-
-.dropdown a {
-  color: white;
-  margin-bottom: 10px;
-}
-
-.dropdown a:hover {text-decoration: underline;}
-
 .partnerContainer {
   display: flex;
   flex-direction: row;
@@ -806,10 +792,7 @@ svg {
   nav {
     display: none;
   }
-  .hamburger {
-    width: 10vw;
-    height: 10vw;
-  }
+  
   .new-btn {
     margin-right: 12vw;
     border-radius: 5px;
