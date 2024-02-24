@@ -11,29 +11,24 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="./js/script.js" defer></script>
     <script src="https://kit.fontawesome.com/0f20a2b955.js" defer crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-</head>
 
-<div class="top_comp">
-    <a href="/"><img class="left_img" src="/images/logo.jpg"></a>
-    <h2>LOREM ISPUM DOLOR SIT AMET</h2>
-    <img class="right_img" src="/images/logo.jpg" alt="">
- </div>
+</head>
 
 <body>
   <div class="dropdown">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
     <a href="#" onclick="document.getElementById('whyUs').scrollIntoView({behavior: 'smooth'})">Why Us</a>
     <a href="#" onclick="document.getElementById('partners').scrollIntoView({behavior: 'smooth'})">Partners</a>
     <a href="#" onclick="document.getElementById('note').scrollIntoView({behavior: 'smooth'})">Our Legacy</a>
   </div>
   <nav>
     <div class="nav-logo">
+        <a href="#">
+            <img class="img-navbar" src="images/logo.jpg">
+        </a>
     </div>
     <ul class="nav-links">
-      <li class="link" onmouseover="showInternalLinks()" id="homeLink"><a href="#">Home &nbsp;<i class="fa fa-angle-down" style="vertical-align: middle;"></i></a></li>
+      <li class="link" onmouseover="showInternalLinks()" id="homeLink"><a href="index.html">Home &nbsp;<i class="fa fa-angle-down" style="vertical-align: middle;"></i></a></li>
       <li class="link" style="color: white; margin: 0;">|</li>
       <li id="link1" class="link"><a href="https://linktr.ee/indiamun" target="_blank">Apply Now</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>
@@ -67,103 +62,11 @@
     <li><a href="#" onclick="document.getElementById('contactUs').scrollIntoView({behavior: 'smooth'})">Contact Us</a></li>
   </ul>
 
-
-  <div class="slidesContainer" id="slidesContainer">
-    <div class="slide activeSlide" id="slide1">
-        <h1><span class="specialText" style="font-weight: 900;" data-value="INDIA MUN">INDIA MUN</span> 2024</h1>
-        <h2>India's Largest Online Conference!</h2>
-        <a href="https://linktr.ee/indiamun" target="_blank" class="slidesBtn">APPLY NOW!</a>
-        <div class="circles">
-            <div class="circle slide1Circle" onclick="goToSlide('slide1', true)"></div>
-            <div class="circle slide2Circle" onclick="goToSlide('slide2', true)"></div>
-            <div class="circle slide3Circle" onclick="goToSlide('slide3', true)"></div>
-            <div class="circle slide4Circle" onclick="goToSlide('slide4', true)"></div>
-            <div class="circle slide5Circle" onclick="goToSlide('slide5', true)"></div>
-        </div>
-    </div>
-    <div class="slide" id="slide2" style="background-image: url('./images/WebsiteCover.png')">
-        <h1><span class="specialText" style="font-weight: 900;" data-value="INDIA MUN">INDIA MUN</span> 2024</h1>
-        <h2>Take Part in India’s National Online MUN</h2>
-        <a href="https://linktr.ee/indiamun" target="_blank" class="slidesBtn">APPLY NOW!</a>
-        <div class="circles">
-            <div class="circle slide1Circle" onclick="goToSlide('slide1', true)"></div>
-            <div class="circle slide2Circle" onclick="goToSlide('slide2', true)"></div>
-            <div class="circle slide3Circle" onclick="goToSlide('slide3', true)"></div>
-            <div class="circle slide4Circle" onclick="goToSlide('slide4', true)"></div>
-            <div class="circle slide5Circle" onclick="goToSlide('slide5', true)"></div>
-        </div>
-    </div>
-    <div class="slide" id="slide3" style="background-image: url('./images/WebsiteCover.png')">
-        <h1><span class="specialText" style="font-weight: 900;" data-value="INDIA MUN">INDIA MUN</span> 2024</h1>
-        <h2>Our Country, Our Voice, Our MUN</h2>
-        <a href="https://linktr.ee/indiamun" target="_blank" class="slidesBtn">APPLY NOW!</a>
-        <div class="circles">
-            <div class="circle slide1Circle" onclick="goToSlide('slide1', true)"></div>
-            <div class="circle slide2Circle" onclick="goToSlide('slide2', true)"></div>
-            <div class="circle slide3Circle" onclick="goToSlide('slide3', true)"></div>
-            <div class="circle slide4Circle" onclick="goToSlide('slide4', true)"></div>
-            <div class="circle slide5Circle" onclick="goToSlide('slide5', true)"></div>
-        </div>
-    </div>
-    <div class="slide" id="slide4" style="background-image: url('./images/WebsiteCover.png')">
-        <h1><span class="specialText" style="font-weight: 900;" data-value="INDIA MUN">INDIA MUN</span> 2024</h1>
-        <h2>This time, debate for India!</h2>
-        <a href="https://linktr.ee/indiamun" target="_blank" class="slidesBtn">APPLY NOW!</a>
-        <div class="circles">
-            <div class="circle slide1Circle" onclick="goToSlide('slide1', true)"></div>
-            <div class="circle slide2Circle" onclick="goToSlide('slide2', true)"></div>
-            <div class="circle slide3Circle" onclick="goToSlide('slide3', true)"></div>
-            <div class="circle slide4Circle" onclick="goToSlide('slide4', true)"></div>
-            <div class="circle slide5Circle" onclick="goToSlide('slide5', true)"></div>
-        </div>
-    </div>
-    <div class="slide" id="slide5" style="background-image: url('./images/WebsiteCover.png')">
-        <h1><span class="specialText" style="font-weight: 900;" data-value="INDIA MUN">INDIA MUN</span> 2024</h1>
-        <h2>India Model United Nations 2024 🚀</h2>
-        <a href="https://linktr.ee/indiamun" target="_blank" class="slidesBtn">APPLY NOW!</a>
-        <div class="circles">
-            <div class="circle slide1Circle" onclick="goToSlide('slide1', true)"></div>
-            <div class="circle slide2Circle" onclick="goToSlide('slide2', true)"></div>
-            <div class="circle slide3Circle" onclick="goToSlide('slide3', true)"></div>
-            <div class="circle slide4Circle" onclick="goToSlide('slide4', true)"></div>
-            <div class="circle slide5Circle" onclick="goToSlide('slide5', true)"></div>
-        </div>
-    </div>
-</div>
-
-<div class="whyUs" id="whyUs">
-    <div class="containerHeading hidden">
-        <h1>Why Choose Us</h1>
-        <div class="underline"></div>
-    </div>
-    <div class="containerWhyUs hidden">
-        <div class="card hidden">
-            <img src="./images/wcu_logo1_i.png" alt="">
-            <h1>UNLEASH YOUR POTENTIAL</h1>
-            <p>Engage in thought-provoking discussions on global issues, honing your diplomatic skills and critical thinking.</p>
-        </div>
-        <div class="card hidden">
-            <img src="./images/wcu_logo2_i.png" alt="">
-            <h1>CONNECT NATURALLY</h1>
-            <p>Network with passionate delegates from across the country, fostering friendships and cross-cultural understanding.</p>
-        </div>
-        <div class="card hidden">
-            <img src="./images/wcu_logo3_i.png" alt="">
-            <h1>IMMERSIVE VIRTUAL EXPERIENCE</h1>
-            <p>Our cutting-edge virtual platform ensures an interactive and seamless MUN experience, right from the comfort of your home.</p>
-        </div>
-        <div class="card hidden">
-            <img src="./images/wcu_logo4_i.png" style="aspect-ratio: 1.2; width: 7.5vw; margin-bottom: 1vw;" alt="">
-            <h1>EXPERTLY CRAFTED COMMITTEES</h1>
-            <p>Explore diverse committees that simulate real-world challenges, offering you a chance to make a lasting impact.</p>
-        </div>
-    </div>
-</div>
-
 <div class="committees" id="committees">
     <div class="containerHeading hidden">
-        <h1>Our Committees</h1>
+        <h1 style="margin-top: 2.5vw;">Our Committees</h1>
         <div class="underline"></div>
+        <br>
     </div>
     <div class="commiteeContainer hidden">
         <div class="cardCommittee hidden">
@@ -185,46 +88,7 @@
         <div class="cardCommittee hidden">
             <img class="hidden" src="/images/AIPPM.png" alt="">
             <h1 class="hidden"><b style="font-weight: 700;">AGENDA</b>: Environmental Sustainability</h1>
-        </div>
-    </div>
-</div>
-
-
-<div class="note" id="note">
-    <div class="containerHeading hidden">
-        <h1>Note From The Founder</h1>
-        <div class="underline"></div>
-    </div>
-    <div class="noteCard hidden">
-        <img class=" hidden" src="/images/founder.jpg" alt="">
-        <p class="noteText hidden">"Debate is a lot of things. It’s a way for someone shy to overcome their fear of public speaking, it’s a way for someone to fuel their passion to excellence, it’s a way for people with opposing views to come together, but most importantly, it helps us solve problems at a larger scale, as a country, united in our stance. Whether it’s a global crisis, or a regional adversity, debate gives us a voice among those who want to hear and be heard, and that is exactly what India Model United Nations is about. A platform, for debaters to come together, and make a positive impact as a whole, as a community. A voice, for Indians, India MUN."</p>
-        <div class="credentials hidden">
-            <p class="text hidden">- Naman Gupta,</p>
-            <p class="text hidden">Managing Director</p>
-        </div>
-    </div>
-</div>
-
-<div class="partners" id="partners">
-    <div class="containerHeading hidden">
-        <h1>Our Partners</h1>
-        <div class="underline"></div>
-    </div>
-    <div class="partnerContainer hidden">
-        <div class="partner hidden">
-            <img src="./images/dublieu.png" alt="">
-            <h1><span style="font-weight: 700;">Dublieu:</span> Media and Public Relations Partner.</h1>
-            <p>Dublieu is an online platform that helps teenagers and students find various opportunities, such as competitions, MUNs (Model United Nations), fellowships, hackathons, quizzes, and internships. </p>
-        </div>
-        <div class="partner hidden">
-            <img src="./images/kamakhya.png" alt="">
-            <h1><span style="font-weight: 700;">Project Kamakhya:</span> Sustainability Partner.</h1>
-            <p>This project focuses on raising awareness about menstrual hygiene and providing sustainable menstrual options for women and girls in underprivileged communities in India.</p>
-        </div>
-        <div class="partner hidden">
-            <img src="./images/spectertech.png" alt="">
-            <h1><span style="font-weight: 700;">SpecterTech:</span> Software Partner.</h1>
-            <p>Spectertech is a software development and education enterprise which has helped over 500,000 developers learn computer science through various online platforms.</p>
+            <br><br><br>
         </div>
     </div>
 </div>
@@ -277,51 +141,4 @@
 </div>
 
 </body>
-
-<script>
-    var currentSlide = 1;
-    window.onload = () => {
-
-        const slideRect = document.getElementById('slide1').getBoundingClientRect()
-        const slideHeight = slideRect.height
-        document.getElementById('slidesContainer').style.height = slideHeight + 'px'
-    }
-    const slidesInterval = setInterval(() => {
-        
-        if (currentSlide < 5) {
-            goToSlide(`slide${currentSlide + 1}`, false)
-        } else if (currentSlide == 5) {
-            goToSlide('slide1', false)
-        }
-    }, 4000, true)
-    const goToSlide = (slideId, isBtn) => {
-        if (slideId == `slide${currentSlide}`) return; // If the requested slide is same as the current slide.
-        if (isBtn) {
-            clearInterval(slidesInterval) // If the user came to the slide by clicking on a circle.
-        }
-        for (let i = 1; i < 6; i++) {
-            const elmnt = document.getElementById(`slide${i}`)
-            if (elmnt.classList.contains('activeSlide')) {
-                elmnt.className = 'slide doneSlide'
-                setTimeout(() => {
-                    elmnt.style.transition = '0s'
-                    elmnt.className = 'slide'
-                    setTimeout(() => {
-                        elmnt.style.transition = '1s'
-                    }, 100)
-                }, 1000)
-            }
-        }
-        document.getElementById(slideId).className = 'slide activeSlide'
-        currentSlide = Number(slideId.charAt(slideId.length - 1))
-        const allCircles = document.getElementsByClassName(`circle`)
-        for (let j = 0; j < allCircles.length; j++) {
-             if (allCircles[j].classList.contains(`slide${currentSlide}Circle`)) {
-                allCircles[j].style.backgroundColor = 'white'
-             } else {
-                allCircles[j].style.backgroundColor = 'transparent'
-             }
-        }
-    }
-</script>
 </html>
