@@ -9,7 +9,7 @@ async function initiateBackend() {
       console.error("Unsuccessful response:", response.status);
     }
   } catch (error) {
-    console.error("Error during backend initiation:", error);
+    console.error("Error during backend initiation:", error.message);
   }
 }
 
@@ -41,9 +41,9 @@ function isValidEmail(email) {
 async function sendData(e) {
   e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const subject = document.getElementById("subject").value;
-  const text = document.getElementById("text").value;
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const text = document.getElementById("text").value.trim();
 
   if (!isValidEmail(email)) {
     return alert("Please enter a valid email address.");
@@ -66,12 +66,12 @@ async function sendData(e) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // Add additional security headers if necessary
       },
       body: JSON.stringify(data),
     });
 
     if (response.ok) {
-      console.log(JSON.stringify(data));
       console.log("Success");
       alert("Email sent successfully. Check your inbox for confirmation");
     } else {
@@ -84,7 +84,7 @@ async function sendData(e) {
 
 // Function to handle fetch errors
 function handleFetchError(error) {
-  console.error("Error during fetch:", error);
+  console.error("Error during fetch:", error.message);
 
   if (error instanceof TypeError && error.message === "Failed to fetch") {
     alert("Network error. Please check your internet connection and try again.");
