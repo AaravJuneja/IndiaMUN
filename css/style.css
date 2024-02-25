@@ -32,9 +32,15 @@ html {
   font-family: "Quicksand", sans-serif;
   margin-top: 16px;
   font-weight: 800;
+<<<<<<< HEAD
   letter-spacing: 6.15px;
   line-height: 1.4;
   font-size: 2.25em;
+=======
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  font-size: 2em;
+>>>>>>> e73f54622152bf0d55450ec75e4203a1fd41f457
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -937,4 +943,38 @@ svg {
     color: white;
     list-style-type: none;
   }
+}
+
+.team-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-member {
+  width: 200px;
+  margin: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1 );
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 5%;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #FFF;
+}
+
+.team-member p {
+  margin: 0;
+  color: #777;
+  font-size: 1em;
 }
