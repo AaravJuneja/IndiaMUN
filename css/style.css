@@ -775,7 +775,50 @@ svg {
   display: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .top_comp {
+    padding: 30px;
+  }
 
+  .left_img {
+    height: 120px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .right_img {
+    height: 70px;
+    width: 180px;
+  }
+
+  .top_comp h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .top_comp {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left_img {
+    height: 100px;
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .right_img {
+    height: 60px;
+    width: 150px;
+  }
+
+  .top_comp h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+}
 
 @media only screen and (min-width: 601px) {
   .phone-nav-menu-hidden {
@@ -787,8 +830,8 @@ svg {
 @media only screen and (max-width: 600px) {
   .phone-nav {
     display: flex;
-    /* padding: 0; */
-    /* margin: 0; */
+    padding: 0;
+    margin: 0;
     height: 15vh;
   }
   .phone-nav > .nav-logo > a > img {
