@@ -6,10 +6,10 @@ async function initiateBackend() {
     if (response.ok) {
       console.log("Backend initiated");
     } else {
-      console.log("Unsuccessful response:", response.status);
+      console.error("Unsuccessful response:", response.status);
     }
   } catch (error) {
-    console.log("Error during backend initiation:", error);
+    console.error("Error during backend initiation:", error);
   }
 }
 
@@ -95,7 +95,7 @@ function handleFetchError(error) {
 
 // Function to handle non-OK responses
 function handleErrorResponse(status) {
-  console.log("Error response:", status);
+  console.error("Error response:", status);
   alert("Error sending email. Please try again later.");
 }
 
