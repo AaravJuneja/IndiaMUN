@@ -18,7 +18,7 @@
 
 <div class="top_comp">
     <a href="/"><img class="left_img" src="/images/logo.jpg"></a>
-    <h2>INDIA'S LARGEST ONLINE DEBATING PLATFORM</h2>
+    <h2 data-content="INDIA'S LARGEST ONLINE DEBATING PLATFORM">INDIA'S LARGEST ONLINE DEBATING PLATFORM</h2>
     <img class="right_img" src="/images/dublieu.png" alt="">
  </div>
 
@@ -29,7 +29,15 @@
     <ul class="nav-links">
       <li class="link" id="homeLink"><a href="index.html">Home &nbsp;</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>
-      <li id="link1" class="link"><a href="about.html">About Us</a></li>
+      <div class="dropdown">
+        <button class="dropbtn">About Us
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="about.html">Vision & Mission</a>
+          <a href="team.html">The Team</a>
+        </div>
+      </div>
       <li class="link" style="color: white; margin: 0;">|</li>
       <li id="link1" class="link"><a href="programs.html">India MUN Programs</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>    
@@ -57,32 +65,64 @@
         </svg></button>
   </nav>
 
-<div class="committees" id="committees">
-    <div class="containerHeading hidden">
-        <h1 style="margin-top: 2.5vw;">India MUN Programs</h1>
-        <div class="underline"></div>
-        <br>
+  <div class="team" id="team">
+    <div class="team-section">
+        <h2>Governing Council</h2>
+        <div class="team-member">
+            <img src="1.jpg" alt="Member 1">
+            <h3>Major Mohommed Ali Shah</h3>
+            <p>Mentor</p>
+        </div>
+
+        <div class="team-member">
+            <img src="2.jpg" alt="Member 2">
+            <h3>Prof. Ritu Gupta</h3>
+            <p>Advisor</p>
+        </div>
+
+        <div class="team-member">
+            <img src="3.jpg" alt="Member 3">
+            <h3>Digraj Singh Rajput</h3>
+            <p>Advisor</p>
+        </div>
+
+        <div class="team-member">
+            <img src="4.jpg" alt="Member 4">
+            <h3>Naman Gupta</h3>
+            <p>Managing Director</p>
+        </div>
     </div>
-    <div class="commiteeContainer hidden">
-        <div class="cardCommittee hidden">
-            <img class="hidden" src="xyz" alt="">
-            <h1 class="hidden"><b style="font-weight: 700;">India MUN Conference</b></h1>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVG5mHxJiUPK19YVKosIl3fmNRvl-oKS9NBIpUWwAEx3HgXw/viewform"><button class="btn1">Registerations Open!</button></a>
+
+    <div class="team-section">
+        <h2>Organizing Team</h2>
+        <div class="team-member">
+            <img src="5.jpg" alt="Member 5">
+            <h3>Kushagra Sethia</h3>
+            <p>Secretariat</p>
         </div>
-        <div class="cardCommittee hidden">
-            <img class="hidden" src="xyz" alt="">
-            <h1 class="hidden"><b style="font-weight: 700;">Marketting Intern Programme</h1>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOT5OvNzyNC1dwaPgMDX8rj92nbgdEiWeg0shwOtXs0hbzzw/viewform"><button class="btn1">Registerations Open!</button></a>
+
+        <div class="team-member">
+            <img src="6.jpg" alt="Member 6">
+            <h3>Member 6</h3>
+            <p>Role: Marketing Manager</p>
         </div>
-        <div class="cardCommittee hidden">
-            <img class="hidden" src="xyz" alt="">
-            <h1 class="hidden"><b style="font-weight: 700;">Campus Ambassador</h1>
-            <a href="#"><button class="btn1">Coming Out Soon!</button></a>
+
+        <div class="team-member">
+            <img src="7.jpg" alt="Member 7">
+            <h3>Member 7</h3>
+            <p>Role: Volunteer Coordinator</p>
         </div>
+
+        <div class="team-member">
+            <img src=".jpg" alt="Member 8">
+            <h3>Member 8</h3>
+            <p>Role: Logistics Manager</p>
         </div>
     </div>
 </div>
 
+
+</div>
 
 <div class="footer">
     <div class="logo">
@@ -94,7 +134,7 @@
             <input placeholder="Email" id="email" type="email">
             <input type="text" id="subject" min="1" placeholder="Subject" max="50">
             <textarea id="text" style="height: 7vh; display: flex;" type="text" placeholder="Query" min="1" max="500"></textarea>
-            <button onclick="sendData(event)">Submit</button>
+            <button onclick="sendData(event)";>Submit</button>
         </form>
     </div>
     <div class="linksFooter">
@@ -130,6 +170,5 @@
         </a>
     </div>
 </div>
-
 </body>
 </html>
