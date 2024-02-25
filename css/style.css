@@ -32,15 +32,12 @@ html {
   font-family: "Quicksand", sans-serif;
   margin-top: 16px;
   font-weight: 800;
-<<<<<<< HEAD
   letter-spacing: 6.15px;
   line-height: 1.4;
   font-size: 2.25em;
-=======
   letter-spacing: 1.5px;
   line-height: 1.4;
   font-size: 2em;
->>>>>>> e73f54622152bf0d55450ec75e4203a1fd41f457
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
