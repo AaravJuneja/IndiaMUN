@@ -1,13 +1,8 @@
+// Function to initiate the backend on window load
 async function initiateBackend() {
-  return fetch("https://indiamun-backend.onrender.com/chalja/12ka4", {
-    method: "GET"
-  });
-}
-
-// Execute on window load
-window.onload = async () => {
   try {
-    const response = await initiateBackend();
+    const response = await fetch("https://indiamun-backend.onrender.com/chalja/12ka4", { method: "GET" });
+
     if (response.ok) {
       console.log("Backend initiated");
     } else {
@@ -16,10 +11,10 @@ window.onload = async () => {
   } catch (error) {
     console.log("Error during backend initiation:", error);
   }
-};
+}
 
-// Intersection Observer for elements with 'hidden' class
-const observer = new IntersectionObserver((entries) => {
+// Function to handle intersection observer callback
+function handleIntersection(entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
@@ -27,13 +22,22 @@ const observer = new IntersectionObserver((entries) => {
       entry.target.classList.remove('show');
     }
   });
-});
+}
 
-// Observe elements with 'hidden' class
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((element) => observer.observe(element));
+// Function to observe elements with 'hidden' class
+function observeHiddenElements() {
+  const observer = new IntersectionObserver(handleIntersection);
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((element) => observer.observe(element));
+}
 
-// Function to send data on form submission
+// Function to validate email format
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to handle form submission
 async function sendData(e) {
   e.preventDefault();
 
@@ -41,9 +45,7 @@ async function sendData(e) {
   const subject = document.getElementById("subject").value;
   const text = document.getElementById("text").value;
 
-  // Validate email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
+  if (!isValidEmail(email)) {
     return alert("Please enter a valid email address.");
   }
 
@@ -54,9 +56,9 @@ async function sendData(e) {
   alert("Sending email...");
 
   const data = {
-    "userEmail": email,
-    "subject": subject,
-    "text": text
+    userEmail: email,
+    subject: subject,
+    text: text
   };
 
   try {
@@ -76,64 +78,62 @@ async function sendData(e) {
       handleErrorResponse(response.status);
     }
   } catch (error) {
-    console.error("Error during fetch:", error);
-
-    if (error instanceof TypeError && error.message === "Failed to fetch") {
-      alert("Network error. Please check your internet connection and try again.");
-    } else {
-      alert("An unexpected error occurred. Please try again later.");
-    }
+    handleFetchError(error);
   }
 }
 
-// Event listener for form submission
-document.getElementById("sendButton").addEventListener('click', sendData);
+// Function to handle fetch errors
+function handleFetchError(error) {
+  console.error("Error during fetch:", error);
 
-// Star animation functionality
-let interval = null;
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  if (error instanceof TypeError && error.message === "Failed to fetch") {
+    alert("Network error. Please check your internet connection and try again.");
+  } else {
+    alert("An unexpected error occurred. Please try again later.");
+  }
+}
 
-document.getElementsByClassName("specialText")[0].onmouseover = event => {
+// Function to handle non-OK responses
+function handleErrorResponse(status) {
+  console.log("Error response:", status);
+  alert("Error sending email. Please try again later.");
+}
+
+// Function to handle star animation on mouseover
+function handleStarAnimation(event) {
   let iteration = 0;
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const target = event.target;
 
-  clearInterval(interval);
+  clearInterval(target.interval);
 
-  interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
+  target.interval = setInterval(() => {
+    target.innerText = target.innerText
       .split("")
       .map((letter, index) => {
         if (index < iteration) {
-          return event.target.dataset.value[index];
+          return target.dataset.value[index];
         }
 
         return letters[Math.floor(Math.random() * 26)];
       })
       .join("");
 
-    if (iteration >= event.target.dataset.value.length) {
-      clearInterval(interval);
+    if (iteration >= target.dataset.value.length) {
+      clearInterval(target.interval);
     }
 
     iteration += 1 / 3;
   }, 30);
-};
+}
 
-//ayush ka kaam hai
+// Event listeners
+window.onload = initiateBackend;
+observeHiddenElements();
+document.getElementById("sendButton").addEventListener('click', sendData);
+document.querySelector('.specialText').addEventListener('mouseover', handleStarAnimation);
 
-window.scroll({
-  top: 2500, 
-  left: 0, 
-  behavior: 'smooth'
-});
-
-// Scroll certain amounts from current position 
-window.scrollBy({ 
-  top: 100, // could be -ve 
-  left: 0, 
-  behavior: 'smooth' 
-});
-
-// Scroll to a certain element
-document.querySelector('.hello').scrollIntoView({ 
-  behavior: 'smooth' 
-});
+// Scroll functionality
+window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
+window.scrollBy({ top: 100, left: 0, behavior: 'smooth' });
+document.querySelector('.hello').scrollIntoView({ behavior: 'smooth' });
