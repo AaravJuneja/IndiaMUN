@@ -4,18 +4,6 @@
     font-weight: 400;
 }
 
-/* added smooth scroll push 81 */
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-.img-navbar {
-  width: 5vw;
-  margin-left: 5vw;
-}
-
 .top_comp {
   position: relative;
   display: flex;
@@ -24,7 +12,6 @@ html {
   padding: 40px;
   background-color: black;
   color: white;
-  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 -8px 16px rgba(255, 255, 255, 0.1);
 }
 
@@ -306,7 +293,6 @@ body {
     width: 10vw;
     margin-left: 45vw;
     padding-bottom: 30px;
-    /* align-items: center; */
     margin-top: 4vh;
 }
 .circle {
@@ -316,8 +302,6 @@ body {
     height: 1.5vw;
     cursor: pointer;
 }
-
-    /* Replace the following URL's with the background image you would like for each slide: */
 
     #slide1 {
       background-image: url('../images/WebsiteCover.png');
