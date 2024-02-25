@@ -960,12 +960,18 @@ svg {
 
 .team-member h3 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #FFF;
 }
 
 .team-member p {
   margin: 0;
-  color: #777;
-  font-size: 1em;
+  color: #999999;
+  font-size: 1.1em;
+}
+
+.team-member h6 {
+  margin: 0;
+  color:#dddddddb;
+  font-size: 0.9em;
 }
