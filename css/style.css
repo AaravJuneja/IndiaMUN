@@ -4,18 +4,6 @@
     font-weight: 400;
 }
 
-/* added smooth scroll push 81 */
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-.img-navbar {
-  width: 5vw;
-  margin-left: 5vw;
-}
-
 .top_comp {
   position: relative;
   display: flex;
@@ -24,7 +12,6 @@ html {
   padding: 40px;
   background-color: black;
   color: white;
-  border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 -8px 16px rgba(255, 255, 255, 0.1);
 }
 
@@ -32,15 +19,12 @@ html {
   font-family: "Quicksand", sans-serif;
   margin-top: 16px;
   font-weight: 800;
-<<<<<<< HEAD
   letter-spacing: 6.15px;
   line-height: 1.4;
   font-size: 2.25em;
-=======
   letter-spacing: 1.5px;
   line-height: 1.4;
   font-size: 2em;
->>>>>>> e73f54622152bf0d55450ec75e4203a1fd41f457
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -103,6 +87,11 @@ nav{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+.btn-a:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
 }
 
 .dropdown {
@@ -309,7 +298,6 @@ body {
     width: 10vw;
     margin-left: 45vw;
     padding-bottom: 30px;
-    /* align-items: center; */
     margin-top: 4vh;
 }
 .circle {
@@ -319,8 +307,6 @@ body {
     height: 1.5vw;
     cursor: pointer;
 }
-
-    /* Replace the following URL's with the background image you would like for each slide: */
 
     #slide1 {
       background-image: url('../images/WebsiteCover.png');
@@ -589,11 +575,9 @@ body {
   color: #fff;
 }
 
-
 :root {
   --glow-rgb: 239 42 201;
 }
-
 
 .glow-point {
   position: absolute;
@@ -945,9 +929,18 @@ svg {
   }
 }
 
+.header {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
 .team-section {
   display: flex;
   justify-content: space-around;
+  color: white;
 }
 
 .team-member {
@@ -965,16 +958,34 @@ svg {
   width: 100%;
   border-radius: 5%;
   margin-bottom: 10px;
+  border-radius: 100px;
 }
 
 .team-member h3 {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #FFF;
 }
 
 .team-member p {
   margin: 0;
-  color: #777;
-  font-size: 1em;
+  color: #999999;
+  font-size: 1.1em;
+}
+
+.team-member h6 {
+  margin: 0;
+  color:#dddddddb;
+  font-size: 0.9em;
+}
+
+.affliates {
+  background-color: white;
+}
+
+.affliates > h1 {
+  margin: 0;
+  font-size: 3.5em;
+  color: #000;
+  text-align: center;
 }
