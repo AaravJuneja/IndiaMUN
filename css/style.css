@@ -795,18 +795,12 @@ body {
 }
 
 .linksFooter > a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3em;
   transition: all 500ms ease;
-  background: #fff;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
+
 .linksFooter > a:hover {
-  background: -webkit-linear-gradient(89deg, #EC0146 0.48%, #9F057D 22.21%, #BC3060 39.16%, #E97832 57.03%, #6B2BD8 73.44%, #7D2BB4 88.63%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+  transition: all 0.5s ease;
 }
 
 svg {

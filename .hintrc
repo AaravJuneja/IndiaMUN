@@ -8,6 +8,17 @@
     "axe/structure": "off",
     "disown-opener": "off",
     "no-inline-styles": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "width: fit-content",
+          "backdrop-filter",
+          "overflow-clip-margin",
+          "overflow: clip"
+        ]
+      }
+    ]
   }
 }
