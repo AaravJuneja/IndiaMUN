@@ -2,7 +2,6 @@
 * {
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
-    /* added crosshair support */
     cursor: crosshair;
 }
 
@@ -10,7 +9,6 @@
   background-color: black;
   color: #d50156;
 }
-
 
 .top_comp {
   position: relative;
