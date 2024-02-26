@@ -199,7 +199,7 @@ nav{
 }
 
 .home {
-  background-image: url(../images/WebsiteCover.png); 
+  background-image: url('/images/Desktop1.png');
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;
@@ -208,7 +208,7 @@ nav{
 }
 
 .whyus {
-  background-image: url(../images/bg_1.png); 
+  background-image: url('/images/Desktop2.png');
   background-attachment: fixed;
   background-size: cover;
   color: #ffffff;
@@ -308,28 +308,28 @@ body {
     cursor: pointer;
 }
 
-    #slide1 {
-      background-image: url('../images/WebsiteCover.png');
+  #slide1 {
+      background-image: url('/images/Desktop1.png');
       background-size: cover;
       background-repeat: no-repeat;
   }
   #slide2 {
-      background-image: url('../images/WebsiteCover.png');
+      background-image: url('/images/Desktop1.png');
       background-size: cover;
       background-repeat: no-repeat;
   }
   #slide3 {
-      background-image: url('../images/WebsiteCover.png');
+      background-image: url('/images/Desktop1.png');
       background-size: cover;
       background-repeat: no-repeat;
   }
   #slide4 {
-      background-image: url('../images/WebsiteCover.png');
+      background-image: url('/images/Desktop1.png');
       background-size: cover;
       background-repeat: no-repeat;
   }
   #slide5 {
-      background-image: url('../images/WebsiteCover.png');
+      background-image: url('/images/Desktop1.png');
       background-size: cover;
       background-repeat: no-repeat;
   }
@@ -350,7 +350,8 @@ body {
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background-image: url("../images/bg_1.png");
+  background-image: url('/images/Desktop2.png');
+
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -474,7 +475,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('/images/bg2.png');
+  background-image: url('/images/Frame8.png');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -520,7 +521,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('/images/bg2.png');
+  background-image: url('/images/Desktop4.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -649,14 +650,11 @@ body {
 .partners {
   width: 100vw;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  
-  background-image: url('/images/bg_4.png');
+  background-image: url('/images/Desktop5.png');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
