@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "development"
-  ],
+  "extends": ["development"],
   "hints": {
     "axe/text-alternatives": "off",
     "axe/name-role-value": "off",
@@ -23,8 +21,35 @@
     "axe/parsing": [
       "default",
       {
-        "duplicate-id": "off"
+        "duplicate-id": "off",
+        "empty-heading": "warn"
+      }
+    ],
+    "custom-rule-1": "error",
+    "custom-rule-2": "warn",
+    "custom-rule-3": "off",
+    "grouped-rules": [
+      "default",
+      {
+        "rule-1": "off",
+        "rule-2": "warn"
       }
     ]
-  }
+  },
+  "ignore": [
+    "node_modules/",
+    "build/"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "overrides": [
+    {
+      "files": ["js/script.js"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
