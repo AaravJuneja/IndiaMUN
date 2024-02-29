@@ -5,6 +5,32 @@
     cursor: crosshair;
 }
 
+.scrollUp{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
+  background: crimson;
+  bottom: 32px;
+  right: 32px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.scrollUp.active {
+  bottom: 32;
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(-55px);
+}
+
 ::selection{
   background-color: black;
   color: #d50156;

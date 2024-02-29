@@ -23,6 +23,21 @@
  </div>
 
 <body>
+    <a href="" class="scrollUp">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const scrollUp = document.querySelector('.scrollUp');
+
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 100){
+                scrollUp.classList.add("active");
+            } else {
+                scrollUp.classList.remove("active");
+            }
+        });
+    </script>
   <nav>
     <div class="nav-logo">
     </div>
