@@ -971,6 +971,9 @@ svg {
   display: flex;
   justify-content: space-around;
   color: white;
+  width: auto;
+  padding: auto;
+  margin: auto;
 }
 
 .team-member {
