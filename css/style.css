@@ -303,6 +303,7 @@ body {
     height: 100vh;
     transition: 1s;
 }
+
 .slide h1 {
     color: white;
     font-size: 4em;
@@ -310,11 +311,13 @@ body {
     /* padding-bottom: 0.6em; */
     font-weight: 900;
 }
+
 .slide h2 {
     padding-bottom: 1.5em;
     color: white;
     font-size: 2em;
 }
+
 .slidesBtn {
     border: 2px solid white;
     color: white;
@@ -326,6 +329,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .slidesBtn:hover {
     background-color: white;
     color: black;

@@ -22,15 +22,30 @@
     <a href="https://www.dublieu.com/"><img class="right_img" src="/images/dublieu.png" alt=""></a>
  </div>
 
-<body style="background-image: url(images/Frame8.png);">
+<body>
+    <a href="" class="scrollUp">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const scrollUp = document.querySelector('.scrollUp');
+
+        window.addEventListener('scroll', () => {
+            if(window.pageYOffset > 100){
+                scrollUp.classList.add("active");
+            } else {
+                scrollUp.classList.remove("active");
+            }
+        });
+    </script>
   <nav>
-    <div class="nav-logo">
-    </div>
+    <div class="nav-logo"></div>
+    
     <ul class="nav-links">
       <li class="link" id="homeLink"><a href="index.html">Home &nbsp;</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>
       <div class="dropdown">
-        <button class="dropbtn">About Us
+        <button class="dropbtn">About Us      
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -41,9 +56,9 @@
       <li class="link" style="color: white; margin: 0;">|</li>
       <li id="link1" class="link"><a href="programs.html">India MUN Programs</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>    
-      <li id="link1" class="link"><a href="https://linktr.ee/indiamun" target="_blank">Apply Now</a></li>
+      <li id="link1" class="link"><a href="https://linktr.ee/indiamun" target="_blank">Affliate Now</a></li>
       <li class="link" style="color: white; margin: 0;">|</li>
-      <li id="link2" class="link"><a href="affliates.html">Affliate Now</a></li>
+      <!--<li id="link2" class="link"><a href="affliates.html">Affliate Now</a></li>-->
       <li class="link" style="color: white; margin: 0;">|</li>
       <li id="link3" class="link"><a href="committees.html">Committees</a></li>
   </ul>
@@ -55,15 +70,6 @@
             <img class="img-navbar" src="images/logo.jpg">
         </a>
     </div>
-    
-    <button style="color: #fff;" class="new-btn">
-        <?xml version="1.0" encoding="utf-8"?>
-        <svg class="hamburger" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
-        </svg></button>
-  </nav>
   
   <br><br><br>
  
